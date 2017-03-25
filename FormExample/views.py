@@ -16,6 +16,8 @@ def index(request):
 def summoner_one(request):
     if request.method == 'GET':
         template = loader.get_template('results.html')
-        query = request.GET.get('main_search', None)
+        summoner_one = request.GET.get('summoner_one', None)
+        sumomoner_two = request.GET.get('sumomoner_two', None)
 
-        return HttpResponse(template.render(request=request, context={'summoner_one': query}))
+
+        return HttpResponse(template.render(request=request, context={'summoner_one': summoner_one, 'sumomoner_two': sumomoner_two}))
