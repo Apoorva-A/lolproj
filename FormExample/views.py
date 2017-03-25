@@ -17,7 +17,7 @@ def summoner_one(request):
     if request.method == 'GET':
         template = loader.get_template('results.html')
         summoner_one = request.GET.get('summoner_one', None)
-        sumomoner_two = request.GET.get('sumomoner_two', None)
+        summoner_two = request.GET.get('summoner_two', None)
 
 
-        return HttpResponse(template.render(request=request, context={'summoner_one': summoner_one, 'sumomoner_two': sumomoner_two}))
+        return HttpResponse(template.render(request=request, context={'summoner_one': summoner_one, 'summoner_two': summoner_two}))
