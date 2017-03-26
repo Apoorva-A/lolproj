@@ -9,7 +9,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # define the url getdata that we have written inside form
     # url(r'^summoner_one/', views.index),
-    url(r'summoner_one', views.summoner_one, name="summoner_one"),
+    url(r'calculate', views.calculate, name="calculate"),
 
 
     # defining the view for root URL
