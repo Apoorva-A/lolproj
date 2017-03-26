@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.template import loader
 from django.views.decorators.csrf import csrf_exempt
 from RIOTAPI import RIOTAPI
-
+import time
 
 
 # disabling csrf (cross site request forgery)
@@ -38,11 +38,13 @@ def summoner_one(request):
         sum_three = api.get_summoner_by_name(summoner_three,1)
         sum_four = api.get_summoner_by_name(summoner_four,1)
         sum_five = api.get_summoner_by_name(summoner_five,1)
+        time.sleep(10)
         sum_six = api.get_summoner_by_name(summoner_six,1)
         sum_seven = api.get_summoner_by_name(summoner_seven,1)
         sum_eight = api.get_summoner_by_name(summoner_eight,1)
         sum_nine = api.get_summoner_by_name(summoner_nine,1)
         sum_ten = api.get_summoner_by_name(summoner_ten,1)
+        time.sleep(10)
 
 
         id1 = sum_one[summoner_one]["id"]
@@ -56,16 +58,17 @@ def summoner_one(request):
         id9 = sum_nine[summoner_nine]["id"]
         id10 = sum_ten[summoner_ten]["id"]
 
+        ##Average Creep Score
+
         info = api.get_summoner_by_name(str(id1),2)
         sum_one_cs = info["champions"][len(info["champions"])-1]["stats"]["totalMinionKills"] / info["champions"][len(info["champions"])-1]["stats"]["totalSessionsPlayed"]
       
-
         info2 = api.get_summoner_by_name(str(id2),2)
         sum_two_cs = info2["champions"][len(info2["champions"])-1]["stats"]["totalMinionKills"] / info2["champions"][len(info2["champions"])-1]["stats"]["totalSessionsPlayed"]
         
         info3 = api.get_summoner_by_name(str(id3),2)
         sum_three_cs = info3["champions"][len(info3["champions"])-1]["stats"]["totalMinionKills"] / info3["champions"][len(info3["champions"])-1]["stats"]["totalSessionsPlayed"]
-        
+        time.sleep(10)
         info4 = api.get_summoner_by_name(str(id4),2)
         sum_four_cs = info4["champions"][len(info4["champions"])-1]["stats"]["totalMinionKills"] / info4["champions"][len(info4["champions"])-1]["stats"]["totalSessionsPlayed"]
         
@@ -77,7 +80,7 @@ def summoner_one(request):
         
         info7 = api.get_summoner_by_name(str(id7),2)
         sum_seven_cs = info7["champions"][len(info7["champions"])-1]["stats"]["totalMinionKills"] / info7["champions"][len(info7["champions"])-1]["stats"]["totalSessionsPlayed"]
-        
+        time.sleep(10)
         info8 = api.get_summoner_by_name(str(id8),2)
         sum_eight_cs = info8["champions"][len(info8["champions"])-1]["stats"]["totalMinionKills"] / info8["champions"][len(info8["champions"])-1]["stats"]["totalSessionsPlayed"]
         

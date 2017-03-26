@@ -1,11 +1,69 @@
-<h1>This is the results page</h1>
-<h2> First Summoner Name is {{ summoner_one }} and averages {{ sum_one_cs }}.</h2>
-<h2> Second Summoner Name is {{ summoner_two }} and averages {{ sum_two_cs }}.</h2>
-<h2> Third Summoner Name is {{ summoner_three }} and averages {{ sum_three_cs }}. </h2>
-<h2> Fourth Summoner Name is {{ summoner_four }} and averages {{ sum_four_cs }}. </h2>
-<h2> Fifth Summoner Name is {{ summoner_five }} and averages {{ sum_five_cs }}.</h2>
-<h2> Sixth Summoner Name is {{ summoner_six }} and averages {{ sum_six_cs }}. </h2>
-<h2> Seventh Summoner Name is {{ summoner_seven }} and averages {{ sum_seven_cs }}. </h2>
-<h2> Eighth Summoner Name is {{ summoner_eight }} and averages {{ sum_eight_cs }}.</h2>
-<h2> Ninth Summoner Name is {{ summoner_nine }} and averages {{ sum_nine_cs }}.</h2>
-<h2> Tenth Summoner Name is {{ summoner_ten }} and averages {{ sum_ten_cs }}.</h2>
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<head>
+    <meta charset="UTF-8">
+    <title>League Analysis</title>
+</head>
+<body>
+<center><h2>Team Analysis</h2></center>
+<br>
+<br>
+<center><h1>Team Breakdown</h1></center>
+<br>
+<br>
+<center><h2>Team 1</h2></center>
+<div class="row">
+	<div class="col-md-2 col-md-offset-1">
+		<center><h3>{{ summoner_one }}</h3></center>
+		<center><h4>Average CS: {{ sum_one_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_two }}</h3></center>
+		<center><h4>Average CS: {{ sum_two_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_three }}</h3></center>
+		<center><h4>Average CS: {{ sum_three_cs }}/game </h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_four }}</h3></center>
+		<center><h4>Average CS: {{ sum_four_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_five }}</h3></center>
+		<center><h4>Average CS: {{ sum_five_cs }}/game</h4></center>
+	</div>
+</div>
+<br>
+<br>
+<center><h2>Team 2</h2></center>
+<div class="row">
+	<div class="col-md-2 col-md-offset-1">
+		<center><h3>{{ summoner_six }}</h3></center>
+		<center><h4>Average CS: {{ sum_six_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_seven }}</h3></center>
+		<center><h4>Average CS: {{ sum_seven_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_eight }}</h3></center>
+		<center><h4>Average CS: {{ sum_eight_cs }}/game </h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_nine }}</h3></center>
+		<center><h4>Average CS: {{ sum_nine_cs }}/game</h4></center>
+	</div>
+	<div class="col-md-2">
+		<center><h3>{{ summoner_ten }}</h3></center>
+		<center><h4>Average CS: {{ sum_ten_cs }}/game</h4></center>
+	</div>
+</div>
+<center><h1>Based on these CS averages, Team 1 has a 53% chance to win!</h1></center>
+</body>
+</html>
+
+   
