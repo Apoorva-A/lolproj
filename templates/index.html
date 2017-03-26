@@ -3,17 +3,67 @@
 
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <head>
     <meta charset="UTF-8">
     <title>League Analysis</title>
 </head>
 <body>
-<center><h1>League Match Predictor</h1></center>
-<br>
-<br>
+    <center><h1>League Match Predictor</h1></center>
+    <br>
+    <br>
     
-    
-<form type="GET" action="calculate">
+    <ul class="nav nav-tabs">
+        <li class="active"><a data-toggle="tab" href="#home">5v5</a></li>
+        <li><a data-toggle="tab" href="#menu1">3v3</a></li>
+        <li><a data-toggle="tab" href="#menu2">1v1</a></li>
+    </ul>
+
+    <div class="tab-content">
+        <div id="home" class="tab-pane fade in active">
+          <form type="GET" action="calculate">
+            <div class="col-xs-6 form-group">
+                <center><h1>Team 1</h1></center>
+                <center><input type="text" name="summoner_one" id="summoner_one" placeholder="Summoner 1"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_two" id="summoner_two" placeholder="Summoner 2"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_three" id="summoner_three" placeholder="Summoner 3"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_four" id="summoner_four" placeholder="Summoner 4"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_five" id="summoner_five" placeholder="Summoner 5"></center>
+                <br>
+                <br>
+            </div>
+            <div class="col-xs-6 form-group">
+                <center><h1>Team 2</h1></center>
+                <center><input type="text" name="summoner_six" id="summoner_six" placeholder="Summoner 1"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_seven" id="summoner_seven" placeholder="Summoner 2"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_eight" id="summoner_eight" placeholder="Summoner 3"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_nine" id="summoner_nine" placeholder="Summoner 4"></center>
+                <br>
+                <br>
+                <center><input type="text" name="summoner_ten" id="summoner_ten" placeholder="Summoner 5"></center>
+                <br>
+                <br>
+            </div>
+            <h2><center><input type="submit" name="submit" value="Calculate"></center></h2>
+        </form>
+    </div>
+    <div id="menu1" class="tab-pane fade">
+       <form type="GET" action="calculate">
         <div class="col-xs-6 form-group">
             <center><h1>Team 1</h1></center>
             <center><input type="text" name="summoner_one" id="summoner_one" placeholder="Summoner 1"></center>
@@ -23,14 +73,6 @@
             <br>
             <br>
             <center><input type="text" name="summoner_three" id="summoner_three" placeholder="Summoner 3"></center>
-            <br>
-            <br>
-            <center><input type="text" name="summoner_four" id="summoner_four" placeholder="Summoner 4"></center>
-            <br>
-            <br>
-            <center><input type="text" name="summoner_five" id="summoner_five" placeholder="Summoner 5"></center>
-            <br>
-            <br>
         </div>
         <div class="col-xs-6 form-group">
             <center><h1>Team 2</h1></center>
@@ -41,18 +83,31 @@
             <br>
             <br>
             <center><input type="text" name="summoner_eight" id="summoner_eight" placeholder="Summoner 3"></center>
-            <br>
-            <br>
-            <center><input type="text" name="summoner_nine" id="summoner_nine" placeholder="Summoner 4"></center>
-            <br>
-            <br>
-            <center><input type="text" name="summoner_ten" id="summoner_ten" placeholder="Summoner 5"></center>
-            <br>
-            <br>
         </div>
+        <h2><center><input type="submit" name="submit" value="Calculate"></center></h2>
+
+
+    </form>
+</div>
+<div id="menu2" class="tab-pane fade">
+  <form type="GET" action="calculate">
+    <div class="col-xs-6 form-group">
+        <center><h1>Player 1</h1></center>
+        <center><input type="text" name="summoner_one" id="summoner_one" placeholder="Summoner 1"></center>
+    </div>
+    <div class="col-xs-6 form-group">
+        <center><h1>Player 2</h1></center>
+        <center><input type="text" name="summoner_six" id="summoner_six" placeholder="Summoner 1"></center>
+        
+    </div>
     <h2><center><input type="submit" name="submit" value="Calculate"></center></h2>
 
 
 </form>
+</div>
+
+</div>
+</div>    
+
 </body>
 </html>
